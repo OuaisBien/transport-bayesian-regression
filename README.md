@@ -51,7 +51,9 @@ We compared a <b>Naive Baseline</b> (Standard HMC trained on raw source data) ag
 
 ### Visualisation
 
-Below is a visualisation of the prediction intervals sorted by power output. Note how the OT-Weighted model (Green) tracks the True Target (Red) significantly better than the Baseline (Blue).
+Below is a visualisation of the prediction intervals sorted by power output. Note how the OT-Weighted model (Green) tracks the True Target (Red) better than the Baseline (Blue).
+
+<img src="https://github.com/OuaisBien/transport-bayesian-regression/blob/main/baseline.png" width=500><img src="https://github.com/OuaisBien/transport-bayesian-regression/blob/main/weighted.png" width=500>
 
 ## 💡 Why Bayesian?
 Why not use standard <code>scikit-learn</code> Linear Regression?
