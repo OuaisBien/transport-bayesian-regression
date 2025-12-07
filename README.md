@@ -47,7 +47,7 @@ We compared a <b>Naive Baseline</b> (Standard HMC trained on raw source data) ag
 | Model	| MAE (MW) | RMSE (MW) | 95% CI Coverage | Interval Width |
 |--------|--------|--------|--------|--------|
 | Naive Baseline | 4.836 | 6.166 | 0.808 | 16.911 |
-| OT-Weighted (Ours) | 4.093 | 5.160 | 0.843 | 14.981 |
+| OT-Weighted (Ours) | 4.049 | 5.092 | 0.850 | 15.013 |
 
 ### Visualisation
 
