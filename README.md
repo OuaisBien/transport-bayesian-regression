@@ -51,9 +51,16 @@ We compared a <b>Naive Baseline</b> (Standard HMC trained on raw source data) ag
 
 ### Visualisation
 
-Below is a visualisation of the prediction intervals sorted by power output. Note how the OT-Weighted model (Green) tracks the True Target (Red) better than the Baseline (Blue).
+Below is a visualisation of the residuals and prediction intervals sorted by power output. Note how the OT-Weighted model (Green) tracks the True Target (Red) better than the Baseline (Blue).
 
-<img src="https://github.com/OuaisBien/transport-bayesian-regression/blob/main/baseline.png" width=500><img src="https://github.com/OuaisBien/transport-bayesian-regression/blob/main/weighted.png" width=500>
+<img src="https://github.com/OuaisBien/transport-bayesian-regression/blob/main/resid.png" width=700>
+
+#### Residual Analysis
+<ul>
+	<li><b>Baseline (Blue)</b>: Exhibits a severe systematic drift, underestimating high-load instances by up to <b>12 MW</b>. This confirms that a model trained on source data fails to extrapolate the correct load-temperature sensitivity to the target domain.</li>
+	<li><b>OT-Weighted (Green)</b>: Systematically reduces this bias, cutting the maximum error by ~<b>40%</b> (from -12 MW to -7 MW).</li>
+	<li><b>Interpretation</b>: The OT correction successfully realigns the domain geometry. The remaining residual structure indicates non-linear thermodynamic dependencies, suggesting future work could incorporate polynomial features ($AT^2$) or Gaussian Processes to capture the non-linear curvature.</li>
+</ul>
 
 ## 💡 Why Bayesian?
 Why not use standard <code>scikit-learn</code> Linear Regression?
